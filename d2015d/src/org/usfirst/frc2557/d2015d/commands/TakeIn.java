@@ -1,7 +1,9 @@
 package org.usfirst.frc2557.d2015d.commands;
 
 import org.usfirst.frc2557.d2015d.Robot;
+import org.usfirst.frc2557.d2015d.RobotMap;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
@@ -21,7 +23,8 @@ public class TakeIn extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	
+    	RobotMap.intakeController.set(1);
+    	RobotMap.feeler.set(DoubleSolenoid.Value.kForward);
     }
 
     // Make this return true when this Command no longer needs to run execute()

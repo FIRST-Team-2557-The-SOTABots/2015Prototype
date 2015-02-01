@@ -52,6 +52,7 @@ public class RobotMap {
     public static DoubleSolenoid feeler;
     public static DoubleSolenoid grasper;
     public static DoubleSolenoid ejecter;
+    public static DigitalOutput limitswitch;
    
 
     
@@ -90,7 +91,7 @@ public class RobotMap {
         
   //      pneumaticsGrabberSolenoid = new DoubleSolenoid(0, 0, 1);      
     //    LiveWindow.addActuator("Pneumatics", "GrabberSolenoid", pneumaticsGrabberSolenoid);
-        
+        limitswitch = new DigitalOutput(3);
         
         locationGyro = new Gyro(0);
         LiveWindow.addSensor("Location", "Gyro", locationGyro);
